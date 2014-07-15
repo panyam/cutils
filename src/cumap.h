@@ -20,7 +20,7 @@ typedef CUObject *(*CUMapGetItemForKeyFunc)(const CUMap *map, CUObject *key);
 /**
  * Puts the value for a particular key.
  */
-typedef void (*CUMapPutItemForKeyFunc)(const CUMap *map, CUObject *key, void *value);
+typedef CUObject *(*CUMapPutItemForKeyFunc)(const CUMap *map, CUObject *key, void *value);
 
 /**
  * Puts all values from a map into this map.
