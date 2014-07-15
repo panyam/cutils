@@ -139,7 +139,7 @@ extern BOOL cu_prototype_decref(CUObject *obj);
 #define cu_decref(obj)                  cu_prototype_decref((CUObject *)(obj))
 #define cu_setattr(parent, attrib, value)  cu_prototype_setattr((CUObject **)(&((parent)->attrib)), (CUObject *)(value), (CUObject *)(parent))
 #define cu_refcount(obj)                cu_allocator_refcount(GET_PROTOTYPE(obj, CUPrototype)->allocator, obj)
-#define cu_hash(proto)                  GET_PROTOTYPE(obj, CUPrototype)->hashFunc(obj)
+#define cu_hash(obj)                    GET_PROTOTYPE(obj, CUPrototype)->hashFunc(obj)
 #define cu_equals(obj1, obj2)           cu_objects_are_equal((CUObject *)(obj1), (CUObject *)(obj2))
 #define cu_compare(obj1, obj2)          cu_objects_compare((CUObject *)(obj1), (CUObject *)(obj2))
 #define cu_tostring(obj)                GET_PROTOTYPE(obj, CUPrototype)->toStringFunc((CUObject *)obj)

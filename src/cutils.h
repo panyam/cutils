@@ -12,6 +12,7 @@
 #include "cuarray.h"
 #include "culist.h"
 #include "cumap.h"
+#include "cuhashmap.h"
 #include "cuset.h"
 #include "custring.h"
 #include "custreams.h"

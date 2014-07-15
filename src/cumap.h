@@ -15,7 +15,7 @@ typedef BOOL (*CUMapContainsKeyFunc)(const CUMap *map, CUString *key);
 /**
  * Gets the value for a particular key.
  */
-typedef void *(*CUMapGetItemForKeyFunc)(const CUMap *map, CUObject *key);
+typedef CUObject *(*CUMapGetItemForKeyFunc)(const CUMap *map, CUObject *key);
 
 /**
  * Puts the value for a particular key.
@@ -30,7 +30,7 @@ typedef void (*CUMapPutAllItemsFunc)(const CUMap *map, const CUMap *another);
 /**
  * Removes a value given by the particular key.
  */
-typedef void *(*CUMapRemoveItemForKeyFunc)(const CUMap *map, CUObject *key);
+typedef CUObject *(*CUMapRemoveItemForKeyFunc)(const CUMap *map, CUObject *key);
 
 /**
  * Returns the keys as a set.
@@ -46,7 +46,6 @@ CU_INHERIT_STRUCT(CUMapPrototype, CUCollectionPrototype,
     CUMapContainsKeyFunc containsKeyFunc;
     CUMapGetItemForKeyFunc getItemForKeyFunc;
     CUMapPutItemForKeyFunc putItemForKeyFunc;
-    CUMapPutAllItemsFunc putAllItemsFunc;
     CUMapRemoveItemForKeyFunc removeItemForKeyFunc;
     CUMapKeySetFunc keySetFunc;
     CUMapValuesFunc valuesFunc;

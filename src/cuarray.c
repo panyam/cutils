@@ -262,7 +262,7 @@ CUArray *cu_array_splice(CUArray *array, int from, int to)
 }
 
 /**
- * Default string prototype.
+ * Default array prototype.
  */
 DECLARE_PROTO_FUNC(cu_array_prototype, CUListPrototype, NULL,
     ((CUCollectionPrototype *)__protoptr__)->sizeFunc = (CUCollectionSizeFunc)cu_array_size;
